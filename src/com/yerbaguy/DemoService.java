@@ -16,11 +16,39 @@ import javax.ws.rs.core.MediaType;
 @Path("/insert")
 public class DemoService {
 	
-    //fiinal static String url = "jdbc:mysql://localhost:3306/PracticeWords";
-    //final static String user = "root";
-    //final static String pass = "";
+	final static String url = "jdbc:mysql://localhost:3306/PracticeWords";
+    final static String user = "root";
+    final static String pass = "90BARTEK90";
  
+ //   @POST
+ //   @Path("/login")
+ //   @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+ //   @Produces(MediaType.TEXT_HTML)
+ //   public String login(@FormParam("email") String email, @FormParam("password") String password){
+ //       String result="false";
         
+ //       try{
+ //           Class.forName("com.mysql.jdbc.Driver");
+ //           Connection con = DriverManager.getConnection(url, user, pass);
+            
+ //           PreparedStatement ps = con.prepareStatement("select * from login where email=? and password=?");
+ //           ps.setString(1, email);
+ //           ps.setString(2, password);
+            
+ //           ResultSet rs = ps.executeQuery();
+            
+ //           if(rs.next()){
+ //               result = "true";
+ //           }
+            
+ //           con.close();
+ //       }
+ //       catch(Exception e){
+ //           e.printStackTrace();
+ //       }
+ //       
+ //       return result;
+ //   }
  
     @POST
     @Path("/doinsert")
@@ -34,7 +62,7 @@ public class DemoService {
             Class.forName("com.mysql.jdbc.Driver");
             //Connection con = DriverManager.getConnection(url, engword, plword);
             
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/PracticeWords","root","");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/PracticeWords","root","90BARTEK90");
                         
             PreparedStatement ps = con.prepareStatement("insert into Word(engword, plword) values(?,?)");
             ps.setString(1, engword);
