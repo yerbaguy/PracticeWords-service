@@ -782,7 +782,28 @@ public class MyMethods {
 	
 	
 	
+	@GET
+	//@Produces("application/json")
+	//@Path("/getidofengword/{englishword}/{countrand}")
+//	@Path("/getidofengword/{englishword}")
+	@Path("/getidofengword/{engword}")
+//	@Path("/getidofengword")
+	//@Consumes(MediaType.APPLICATION_JSON) //added
+	@Produces(MediaType.APPLICATION_JSON)
+//	public String getIdOfEngWord(@QueryParam("englishword") String englishword, int countrand) throws SQLException {
+//	public int getIdOfEngWord(@QueryParam("englishword") String englishword) throws SQLException {	
+	public void getIdOfEngWord(@QueryParam("engword") String engword) throws SQLException {	
+		 //englishword = "kind";
+		
 	
+		
+		  System.out.println("engword:" + engword);
+		
+	     
+		 //return result;
+		
+		
+	}
 	
 	
 	
